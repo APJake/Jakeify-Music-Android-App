@@ -4,6 +4,7 @@ import android.content.Context
 import com.apjake.jakifymusic.R
 import com.apjake.jakifymusic.exoplayer.MusicServiceConnection
 import com.apjake.jakifymusic.ui.adapters.SongAdapter
+import com.apjake.jakifymusic.ui.adapters.SwipeSongAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
@@ -34,6 +35,10 @@ object AppModule {
     fun provideMusicServiceConnection(
         @ApplicationContext context: Context,
     ) = MusicServiceConnection(context)
+
+    @Provides
+    @Singleton
+    fun provideSwipeSongAdapter() = SwipeSongAdapter()
 
 
 }

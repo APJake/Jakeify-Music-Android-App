@@ -10,7 +10,7 @@
         android:id="@+id/flFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/vpSong"
+        app:layout_constraintBottom_toTopOf="@+id/llCurrentMusic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,35 +27,53 @@
 
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/ivCurSongImage"
-        android:layout_width="@dimen/vpSongHeight"
-        android:layout_height="@dimen/vpSongHeight"
-        android:scaleType="centerCrop"
-        android:background="@color/darkBackground"
+    <LinearLayout
+        android:id="@+id/llCurrentMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_dark_rounded"
+        android:layout_margin="@dimen/space_min"
+        android:paddingVertical="@dimen/space_tiny"
+        android:paddingHorizontal="@dimen/space_tiny"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/icon" />
+        >
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpSong"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/vpSongHeight"
-        android:background="@color/darkBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
-        app:layout_constraintStart_toEndOf="@+id/ivCurSongImage" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="@dimen/radius_large"
+            >
+            <ImageView
+                android:id="@+id/ivCurSongImage"
+                android:layout_width="@dimen/vpSongHeight"
+                android:layout_height="@dimen/vpSongHeight"
+                android:src="@drawable/music_icon"
+                android:scaleType="fitXY"
+                android:background="@color/darkBackground"
+                android:contentDescription="@string/icon" />
 
-    <ImageView
-        android:id="@+id/ivPlayPause"
-        android:layout_width="@dimen/vpSongHeight"
-        android:layout_height="@dimen/vpSongHeight"
-        android:background="@color/darkBackground"
-        android:src="@drawable/ic_play_circle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/vpSong"
-        app:layout_constraintTop_toTopOf="@id/vpSong"
-        android:contentDescription="@string/icon"
-        app:tint="@color/onBackground" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpSong"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vpSongHeight"
+            android:layout_weight="1"
+            android:background="@color/darkBackground"
+            />
+        <ImageView
+            android:id="@+id/ivPlayPause"
+            android:layout_width="@dimen/vpSongHeight"
+            android:layout_height="@dimen/vpSongHeight"
+            android:background="@color/darkBackground"
+            android:src="@drawable/ic_play_circle"
+            android:contentDescription="@string/icon"
+            app:tint="@color/onBackground" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

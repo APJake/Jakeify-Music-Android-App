@@ -6,8 +6,10 @@
     <color name="darkBackground">#222120</color>
     <color name="background">#383634</color>
     <color name="onBackground">#eee</color>
-    <color name="onPrimary">#eee</color>
+    <color name="onPrimary">#383634</color>
     <color name="onAccent">#222</color>
     <color name="surface">#FAF9F4</color>
     <color name="onSurface">#101010</color>
+
+    <color name="hint">#65EEEEEE</color>
 </resources>

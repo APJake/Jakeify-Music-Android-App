@@ -23,7 +23,7 @@ class MainViewModel @Inject constructor(
     private val _mediaItems = MutableLiveData<Resource<List<Song>>>()
     val mediaItems: LiveData<Resource<List<Song>>> = _mediaItems
 
-    val isConnection = musicServiceConnection.isConnected
+    val isConnected = musicServiceConnection.isConnected
     val networkError = musicServiceConnection.networkError
     val currentPlayingSong = musicServiceConnection.currentPlayingSong
     val playbackState = musicServiceConnection.playbackState
@@ -41,7 +41,6 @@ class MainViewModel @Inject constructor(
                         mediaId = it.mediaId?:"",
                         title = it.description.title.toString(),
                         subtitle = it.description.subtitle.toString(),
-                        singer = it.description.mediaDescription.toString(),
                         songUrl = it.description.mediaUri.toString(),
                         imageUrl = it.description.iconUri.toString(),
                     )

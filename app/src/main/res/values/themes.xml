@@ -28,4 +28,67 @@
     <style name="MyTextStyle" parent="android:Widget.TextView">
         <item name="android:textColor">@color/onBackground</item>
     </style>
+
+    <style name="MyText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:textColor">@color/onBackground</item>
+    </style>
+    <style name="MyText.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="MyText.OnPrimary">
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+    <style name="MyText.Hint">
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
+    <style name="MyText.Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MyText.Bold.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="MyText.Bold.OnPrimary">
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+    <style name="MyText.Bold.Hint">
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
+    <style name="MyText.Small" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/onBackground</item>
+    </style>
+    <style name="MyText.Small.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="MyText.Small.OnPrimary">
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+    <style name="MyText.Small.Hint">
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
+    <style name="MyText.Big">
+        <item name="android:textSize">@dimen/text_regular_2x</item>
+        <item name="android:textColor">@color/onBackground</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MyText.Big.Primary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="MyText.Big.OnPrimary">
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+    <style name="MyText.Big.Hint">
+        <item name="android:textColor">@color/hint</item>
+    </style>
+    <style name="MyText.Big.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="MyText.Big.Normal.Hint">
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
 </resources>

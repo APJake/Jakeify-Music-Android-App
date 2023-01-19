@@ -2,7 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/space_min"
+        android:paddingHorizontal="@dimen/space_default"
+        android:paddingVertical="@dimen/space_min"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/btnDashboard"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_dashboard"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/icon"
+            app:tint="@color/onBackground" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/MyText.Big"
+            android:text="@string/all_songs"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/space_min"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/icSearch"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_search"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/icon"
+            app:tint="@color/onBackground" />
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/pbLoading"
@@ -16,12 +61,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAllSongs"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/llHeader" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

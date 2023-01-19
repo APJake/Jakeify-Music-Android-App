@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_dark_rounded.xml" value="0.2755208333333333" />
+        <entry key="app/src/main/res/drawable/bg_favourite_checkbox.xml" value="0.2755208333333333" />
         <entry key="app/src/main/res/drawable/circle_drawable.xml" value="0.13425925925925927" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.2755208333333333" />
+        <entry key="app/src/main/res/drawable/ic_favourite.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_favourite_outline.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_music_library.xml" value="0.13425925925925927" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17844202898550723" />
-        <entry key="app/src/main/res/layout/single_song_item.xml" value="0.17844202898550723" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_song.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/single_playing_song_item.xml" value="0.17844202898550723" />
+        <entry key="app/src/main/res/layout/single_song_item.xml" value="0.25" />
       </map>
     </option>
   </component>

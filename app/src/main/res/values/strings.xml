@@ -3,4 +3,8 @@
     <string name="icon">Icon</string>
     <string name="notification_channel_name">Music Channel</string>
     <string name="notification_channel_description">Shows the currently playing music</string>
+    <string name="image">Image</string>
+    <string name="playing_now">Playing now</string>
+    <string name="playlist">Playlist</string>
+    <string name="all_songs">All Songs</string>
 </resources>

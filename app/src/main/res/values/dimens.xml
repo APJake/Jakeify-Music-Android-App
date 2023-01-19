@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="vpSongHeight">56dp</dimen>
-    <dimen name="icon_size">70dp</dimen>
-    <dimen name="min_spacing">10dp</dimen>
+    <dimen name="vpSongHeight">65dp</dimen>
+
+    <dimen name="icon_size_x_tiny">8dp</dimen>
+    <dimen name="icon_size_tiny">16dp</dimen>
+    <dimen name="icon_size_small">27dp</dimen>
+    <dimen name="icon_size">35dp</dimen>
+    <dimen name="icon_size_large">50dp</dimen>
+    <dimen name="icon_size_x_large">65dp</dimen>
+
+    <dimen name="thumbnail_size">60dp</dimen>
+
+    <dimen name="space_default">20dp</dimen>
+    <dimen name="space_large">30dp</dimen>
+    <dimen name="space_min">10dp</dimen>
+    <dimen name="space_tiny">5dp</dimen>
+    <dimen name="space_x_tiny">2dp</dimen>
+
+    <dimen name="radius_x_large">60dp</dimen>
+    <dimen name="radius_large">20dp</dimen>
+    <dimen name="radius_default">10dp</dimen>
+    <dimen name="radius_min">5dp</dimen>
+
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_regular_2x">17sp</dimen>
+    <dimen name="text_regular_3x">20sp</dimen>
+    <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_2x">32sp</dimen>
+    <dimen name="text_heading_3x">36sp</dimen>
+    <dimen name="text_big">40sp</dimen>
+    <dimen name="text_big_2x">60sp</dimen>
+    <dimen name="text_big_3x">80sp</dimen>
+
 
 </resources>

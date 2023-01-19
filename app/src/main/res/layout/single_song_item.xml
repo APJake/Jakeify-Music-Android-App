@@ -5,19 +5,29 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingHorizontal="@dimen/min_spacing"
-    android:paddingVertical="@dimen/min_spacing"
+    android:paddingHorizontal="@dimen/space_default"
+    android:paddingVertical="@dimen/space_min"
+    android:background="?android:attr/selectableItemBackground"
     >
 
-    <ImageView
-        android:id="@+id/ivItemImage"
-        android:layout_width="@dimen/icon_size"
-        android:layout_height="@dimen/icon_size"
-        android:scaleType="centerCrop"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="@dimen/radius_default"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/music_icon"
-        android:contentDescription="@string/icon" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/music_icon"
+            android:contentDescription="@string/icon" />
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTitle"
@@ -27,10 +37,10 @@
         android:layout_marginRight="16dp"
         android:gravity="center|start"
         tools:text="Playlist Title"
-        android:layout_marginTop="8dp"
-        android:textSize="20sp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/MyText.Big"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivItemImage"
+        app:layout_constraintStart_toEndOf="@+id/cvItemImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -38,12 +48,25 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="100 Songs"
-        android:textSize="14sp"
+        android:textAppearance="@style/MyText.Small.Hint"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivItemImage"
+        app:layout_constraintStart_toEndOf="@+id/cvItemImage"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <CheckBox
+        android:id="@+id/cbFavourite"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:button="@drawable/bg_favourite_checkbox"
+        android:buttonTint="@color/color_checkable"
+        android:background="?attr/selectableItemBackground"
+        android:checked="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

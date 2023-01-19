@@ -3,11 +3,14 @@ package com.apjake.jakifymusic.exoplayer
 import android.app.PendingIntent
 import android.content.Intent
 import android.media.browse.MediaBrowser
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaDescriptionCompat
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
+import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.media.MediaBrowserServiceCompat
 import com.apjake.jakifymusic.common.AppConstants
 import com.apjake.jakifymusic.common.AppConstants.EVENT_NETWORK_ERROR
@@ -58,6 +61,7 @@ class MusicService: MediaBrowserServiceCompat() {
             private set
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate() {
         super.onCreate()
         serviceScope.launch {
